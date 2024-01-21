@@ -5,15 +5,16 @@ body {
 /* Apply grid layout to menu. */
 .main-nav__menu {
   display: grid;
-  grid-template-rows: 42px 18px 25px 50px;
+  grid-template-rows: 55px 40px 130px 130px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 1px;
+  grid-gap: 5px;
   transition: 1s;
-  grid-template-areas: "home home tile1 tile1 tile1 tile1 animations animations about about contact contact"
-    "maps maps maps infographics infographics infographics animations animations tile2 tile2 tile2 tile2"
-    "maps maps maps infographics infographics infographics animations animations other other other other"
-    "maps maps maps infographics infographics infographics animations animations other other other other";
+  grid-template-areas: "home home tile1 tile1 tile1 tile1 other other about about contact contact"
+    "maps maps maps infographics infographics infographics other other tile2 tile2 tile2 tile2"
+    "maps maps maps infographics infographics infographics other other animations animations animations animations"
+    "maps maps maps infographics infographics infographics other other animations animations animations animations";
   margin: 0;
+  background-color: #000000;
 }
 @media screen and (max-width: 768px) {
   .main-nav__menu {
@@ -78,10 +79,10 @@ body {
  }
 
 .main-nav__menu-item-link__home {
-  background-color: #000000;
+  background-color: rgba(255, 255, 255, 0);
  }
  .main-nav__menu-item-link__maps {
-  background-color: #000000;
+  background-color: rgba(255, 255, 255, .10);
  }
  @media screen and (max-width: 576px) {
   .main-nav__menu-item-link__maps {
@@ -89,7 +90,7 @@ body {
    }
 }
  .main-nav__menu-item__info-graphics {
-  background-color: #e03a3e;
+  background-color: rgba(255, 255, 255, 0);
  }
  @media screen and (max-width: 576px) {
   .main-nav__menu-item__info-graphics {
@@ -100,7 +101,7 @@ body {
   background-color: #000000;
  }
  .main-nav__menu-item-link__other {
-  background-color: #000000;
+  background-color: rgba(255, 255, 255, .10);
  }
  .main-nav__menu-item-link__about {
   background-color: #000000;
@@ -113,12 +114,12 @@ body {
  .main-nav__menu::before {
   content: "";
   grid-area: tile1;
-  background-color: #fdb827;
+  background-color: rgba(255, 255, 255, .20);
 }
 .main-nav__menu::after {
   content: "";
   grid-area: tile2;
-  background-color: #fdb827;
+  background-color: rgba(255, 255, 255, .20);
 }
 
 /* Apply nav link styles */
